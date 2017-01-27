@@ -19,13 +19,15 @@ C16.07,4.74,14.12,4,12,4 A9,9,0,0,0,3,13 A9,9,0,0,0,12,22 C17,22,21,17.97,21,13
 C21,10.88,20.26,8.93,19.03,7.39" />
 
             <group android:name="dial" android:pivotX="12" android:pivotY="13">
-                <path android:fillColor="#4d4d4d"
-                      android:pathData="M11,14 L13,14 L13,8 L11,8" />
+                <path
+                    android:fillColor="#4d4d4d"
+                    android:pathData="M11,14 L13,14 L13,8 L11,8" />
             </group>
 
             <group android:name="button">
-                <path android:fillColor="#4d4d4d"
-                      android:pathData="M15,1 L9,1 L9,3 L15,3 L15,1 Z" />
+                <path
+                    android:fillColor="#4d4d4d"
+                    android:pathData="M15,1 L9,1 L9,3 L15,3 L15,1 Z" />
             </group>
         </vector>
     </aapt:attr>
@@ -33,7 +35,7 @@ C21,10.88,20.26,8.93,19.03,7.39" />
     <target android:name="dial">
         <aapt:attr name="android:animation">
             <objectAnimator
-                android:duration="1000"
+                android:duration="600"
                 android:interpolator="@android:anim/accelerate_decelerate_interpolator"
                 android:propertyName="rotation"
                 android:valueFrom="0"
