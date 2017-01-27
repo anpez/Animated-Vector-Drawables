@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animated-vector
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    tools:targetApi="lollipop">
+    <aapt:attr name="android:drawable">
+        <vector
+            android:width="24dp"
+            android:height="24dp"
+            android:viewportWidth="24"
+            android:viewportHeight="24">
+
+            <path
+                android:fillColor="#4d4d4d"
+                android:pathData="M12,20 A7,7,0,0,1,5,13 A7,7,0,0,1,12,6 A7,7,0,0,1,19,13 A7,7,0,0,1,12,20
+M19.03,7.39 L20.45,5.97 C20,5.46,19.55,5,19.04,4.56 L17.62,6
+C16.07,4.74,14.12,4,12,4 A9,9,0,0,0,3,13 A9,9,0,0,0,12,22 C17,22,21,17.97,21,13
+C21,10.88,20.26,8.93,19.03,7.39" />
+
+            <group android:name="dial" android:pivotX="12" android:pivotY="13">
+                <path android:fillColor="#4d4d4d"
+                      android:pathData="M11,14 L13,14 L13,8 L11,8" />
+            </group>
+
+            <group android:name="button">
+                <path android:fillColor="#4d4d4d"
+                      android:pathData="M15,1 L9,1 L9,3 L15,3 L15,1 Z" />
+            </group>
+        </vector>
+    </aapt:attr>
+
+    <target android:name="dial">
+        <aapt:attr name="android:animation">
+            <objectAnimator
+                android:duration="1000"
+                android:interpolator="@android:anim/accelerate_decelerate_interpolator"
+                android:propertyName="rotation"
+                android:valueFrom="0"
+                android:valueTo="360" />
+        </aapt:attr>
+    </target>
+
+    <target android:name="button">
+        <aapt:attr name="android:animation">
+            <set
+                android:fillAfter="true"
+                android:interpolator="@android:anim/accelerate_decelerate_interpolator"
+                android:ordering="sequentially">
+                <objectAnimator
+                    android:duration="150"
+                    android:propertyName="translateY"
+                    android:valueTo="1" />
+                <objectAnimator
+                    android:duration="150"
+                    android:propertyName="translateY"
+                    android:valueTo="0" />
+            </set>
+        </aapt:attr>
+    </target>
+</animated-vector>
