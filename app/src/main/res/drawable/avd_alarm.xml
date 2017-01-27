@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animated-vector
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    tools:targetApi="lollipop">
+    <aapt:attr name="android:drawable">
+        <vector
+            android:width="24dp"
+            android:height="24dp"
+            android:viewportWidth="24"
+            android:viewportHeight="24">
+
+            <path
+                android:fillColor="#4d4d4d"
+                android:pathData="M 12 20 A 7,7,0,0,1,5,13 A 7,7,0,0,1,12,6 A 7,7,0,0,1,19,13 A 7,7,0,0,1,12,20 M 12 4 A 9,9,0,0,0,3,13 A 9,9,0,0,0,12,22 A 9,9,0,0,0,21,13 A 9,9,0,0,0,12,4 M 12.5 8 L 11 8 L 11 14 L 15.75 16.85 L 16.5 15.62 L 12.5 13.25 L 12.5 8" />
+            <group android:name="buttons" android:pivotX="12" android:pivotY="13">
+                <path
+                    android:fillColor="#4d4d4d"
+                    android:pathData="M 7.88 3.39 L 6.6 1.86 L 2 5.71 L 3.29 7.24 L 7.88 3.39 M 22 5.72 L 17.4 1.86 L 16.11 3.39 L 20.71 7.25 L 22 5.72 Z" />
+            </group>
+        </vector>
+    </aapt:attr>
+
+    <target android:name="buttons">
+        <aapt:attr name="android:animation">
+            <set
+                android:fillAfter="true"
+                android:interpolator="@android:anim/accelerate_decelerate_interpolator"
+                android:ordering="sequentially">
+                <objectAnimator
+                    android:duration="50"
+                    android:propertyName="rotation"
+                    android:valueFrom="0"
+                    android:valueTo="10" />
+                <objectAnimator
+                    android:duration="100"
+                    android:propertyName="rotation"
+                    android:valueFrom="10"
+                    android:valueTo="-10" />
+                <objectAnimator
+                    android:duration="100"
+                    android:propertyName="rotation"
+                    android:valueFrom="-10"
+                    android:valueTo="10" />
+                <objectAnimator
+                    android:duration="100"
+                    android:propertyName="rotation"
+                    android:valueFrom="10"
+                    android:valueTo="-10" />
+                <objectAnimator
+                    android:duration="100"
+                    android:propertyName="rotation"
+                    android:valueFrom="-10"
+                    android:valueTo="10" />
+                <objectAnimator
+                    android:duration="50"
+                    android:propertyName="rotation"
+                    android:valueFrom="10"
+                    android:valueTo="0" />
+            </set>
+        </aapt:attr>
+    </target>
+</animated-vector>
