@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animated-vector
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    tools:targetApi="lollipop">
+    <aapt:attr name="android:drawable">
+        <vector
+            android:width="24dp"
+            android:height="24dp"
+            android:viewportWidth="24"
+            android:viewportHeight="24">
+
+            <path
+                android:fillColor="#4d4d4d"
+                android:pathData="M 12 20 A 8,8,0,0,0,20,12 A 8,8,0,0,0,12,4 A 8,8,0,0,0,4,12 A 8,8,0,0,0,12,20 M 12 2 A 10,10,0,0,1,22,12 A 10,10,0,0,1,12,22 C 6.47 22 2 17.5 2 12 A 10,10,0,0,1,12,2" />
+            <group android:name="dial1" android:pivotX="11.75" android:pivotY="12.65">
+                <path
+                    android:fillColor="#4d4d4d"
+                    android:pathData="M 12.5 7 L 12.5 13 L 11 13 L 11 7 L 12.5 7 Z" />
+            </group>
+            <group android:name="dial2" android:pivotX="11.75" android:pivotY="12.65" android:rotation="120">
+                <path
+                    android:fillColor="#4d4d4d"
+                    android:pathData="M 12.5 7 L 12.5 13 L 11 13 L 11 7 L 12.5 7 Z" />
+            </group>
+        </vector>
+    </aapt:attr>
+
+    <target android:name="dial1">
+        <aapt:attr name="android:animation">
+            <objectAnimator
+                android:interpolator="@android:anim/accelerate_decelerate_interpolator"
+                android:duration="600"
+                android:propertyName="rotation"
+                android:valueFrom="0"
+                android:valueTo="120" />
+        </aapt:attr>
+    </target>
+    <target android:name="dial2">
+        <aapt:attr name="android:animation">
+            <objectAnimator
+                android:interpolator="@android:anim/accelerate_decelerate_interpolator"
+                android:duration="600"
+                android:propertyName="rotation"
+                android:valueFrom="120"
+                android:valueTo="360" />
+        </aapt:attr>
+    </target>
+</animated-vector>
