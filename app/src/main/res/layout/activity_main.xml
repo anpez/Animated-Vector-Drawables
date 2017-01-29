@@ -32,5 +32,12 @@
             android:layout_weight="1"
             android:layout_height="match_parent"
             app:srcCompat="@drawable/avd_timer"/>
+
+        <ImageView
+            app:animateOnClick="@{true}"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:src="@drawable/avd_play_pause"/>
     </LinearLayout>
 </layout>
