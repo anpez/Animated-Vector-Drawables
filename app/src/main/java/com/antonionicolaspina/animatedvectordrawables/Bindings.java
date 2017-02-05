@@ -8,19 +8,26 @@ import android.widget.ImageView;
 
 public class Bindings {
   @BindingAdapter("animateOnClick")
-  public static void setAnimateOnClick(final ImageView view, boolean animate) {
-    if (animate) {
-      view.setOnClickListener(new View.OnClickListener() {
-        @Override
-        public void onClick(View v) {
-          Drawable d = view.getDrawable();
-          if (d instanceof Animatable) {
-            ((Animatable) d).start();
+  public static void setAnimateOnClick(final ImageView view, final Drawable backDrawable) {
+    final Animatable front = (Animatable) view.getDrawable();
+
+    view.setOnClickListener(new View.OnClickListener() {
+      @Override
+      public void onClick(View v) {
+        if (null == backDrawable) {
+          front.start();
+        } else {
+          if (null == view.getTag()) {
+            view.setImageDrawable((Drawable) front);
+            front.start();
+            view.setTag(0);
+          } else {
+            view.setImageDrawable(backDrawable);
+            ((Animatable)backDrawable).start();
+            view.setTag(null);
           }
         }
-      });
-    } else {
-      view.setOnClickListener(null);
-    }
+      }
+    });
   }
 }
