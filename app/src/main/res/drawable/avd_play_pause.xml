@@ -37,7 +37,7 @@
     <target android:name="play2">
         <aapt:attr name="android:animation">
             <objectAnimator
-                android:duration="300"
+                android:interpolator="@android:anim/linear_interpolator"
                 android:propertyName="pathData"
                 android:valueType="pathType"
                 android:valueFrom="M 11.245 16.795 L 19 12.14 L 19 12.14 L 11.245 7.205 Z"
