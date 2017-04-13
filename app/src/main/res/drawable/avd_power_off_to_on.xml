@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animated-vector
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    tools:targetApi="lollipop">
+    <aapt:attr name="android:drawable">
+        <vector
+            android:name="vector"
+            android:height="24dp"
+            android:width="24dp"
+            android:alpha="0.6"
+            android:viewportWidth="24"
+            android:viewportHeight="24">
+
+            <path
+                android:fillColor="#000"
+                android:pathData="M16,7V3H14V7H10V3H8V7H8C7,7 6,8 6,9V14.5L9.5,18V21H14.5V18L18,14.5V9C18,8 17,7 16,7Z"/>
+
+            <path
+                android:name="strike_through1"
+                android:trimPathEnd="1"
+                android:pathData="M3.27,4.27 L19.74,20.74"
+                android:strokeColor="#000"
+                android:strokeLineCap="square"
+                android:strokeWidth="1.8"/>
+
+            <group android:translateX="1.3" android:translateY="-1.3">
+                <path
+                    android:name="strike_through2"
+                    android:trimPathEnd="1"
+                    android:pathData="M3.27,4.27 L19.74,20.74"
+                    android:strokeColor="#fff"
+                    android:strokeLineCap="square"
+                    android:strokeWidth="1.8"/>
+            </group>
+        </vector>
+    </aapt:attr>
+
+    <target android:name="vector">
+        <aapt:attr name="android:animation">
+            <objectAnimator
+                android:interpolator="@android:anim/linear_interpolator"
+                android:duration="@integer/avd_anim_time"
+                android:propertyName="alpha"
+                android:valueFrom="0.6"
+                android:valueTo="1"/>
+        </aapt:attr>
+    </target>
+
+    <target android:name="strike_through1">
+        <aapt:attr name="android:animation">
+            <objectAnimator
+                android:interpolator="@android:anim/accelerate_decelerate_interpolator"
+                android:duration="@integer/avd_anim_time"
+                android:propertyName="trimPathEnd"
+                android:valueFrom="1"
+                android:valueTo="0"/>
+        </aapt:attr>
+    </target>
+
+    <target android:name="strike_through2">
+        <aapt:attr name="android:animation">
+            <objectAnimator
+                android:interpolator="@android:anim/accelerate_decelerate_interpolator"
+                android:duration="@integer/avd_anim_time"
+                android:propertyName="trimPathEnd"
+                android:valueFrom="1"
+                android:valueTo="0"/>
+        </aapt:attr>
+    </target>
+</animated-vector>

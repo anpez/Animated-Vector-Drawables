@@ -23,7 +23,7 @@ public class Bindings {
             view.setTag(0);
           } else {
             view.setImageDrawable(backDrawable);
-            ((Animatable)backDrawable).start();
+            ((Animatable) backDrawable).start();
             view.setTag(null);
           }
         }
