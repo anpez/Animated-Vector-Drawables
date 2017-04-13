@@ -52,17 +52,10 @@
                 android:layout_weight="1"
                 android:layout_height="match_parent"
                 app:srcCompat="@drawable/avd_play_pause2"/>
-
-            <ImageView
-                app:animateOnClick="@{@drawable/avd_power_on_to_off}"
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:layout_height="match_parent"
-                app:srcCompat="@drawable/avd_power_off_to_on"/>
-
         </LinearLayout>
 
         <LinearLayout
+            android:layout_marginTop="@dimen/activity_vertical_margin"
             android:layout_width="match_parent"
             android:layout_height="@dimen/icons_size">
 
@@ -79,6 +72,20 @@
                 android:layout_weight="1"
                 android:layout_height="match_parent"
                 app:srcCompat="@drawable/avd_bulb_off_to_on"/>
+
+            <ImageView
+                app:animateOnClick="@{@drawable/avd_flashlight_on_to_off}"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                app:srcCompat="@drawable/avd_flashlight_off_to_on"/>
+
+            <ImageView
+                app:animateOnClick="@{@drawable/avd_power_on_to_off}"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                app:srcCompat="@drawable/avd_power_off_to_on"/>
         </LinearLayout>
     </LinearLayout>
 </layout>
